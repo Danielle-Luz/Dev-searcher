@@ -1,0 +1,5 @@
+.header button {
+    border-radius: var(--radius-1);
+    font-weight: 600;
+    padding: 1.188rem 1.563rem;
+}

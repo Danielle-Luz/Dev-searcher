@@ -1,0 +1,4 @@
+.card button {
+    border-radius: var(--radius-2);
+    padding: 0.344rem 0.5rem;
+}

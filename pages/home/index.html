@@ -4,12 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../../styles/backgrounds.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/sizes.css">
+    <link rel="stylesheet" href="../../styles/texts.css">
+    <link rel="stylesheet" href="../../styles/flex.css">
     <link rel="stylesheet" href="/styles/globalStyles.css" />
     <link rel="stylesheet" href="index.css" />
+    <!-- COMPONENTS -->
     <title>Git Search</title>
   </head>
-  <body>
-    <main></main>
+  <body class="d-flex full-screen-height">
+    <aside class="align-center bg-brand-1 container d-flex full-height justify-center">
+      <section class="about d-flex flex-column">
+        <h1 class="title-1">Git Search</h1>
+        <p class="text-1">
+          Encontre e se conecte com profissionais de forma rápida e fácil
+        </p>
+        <section class="align-center d-flex flex-wrap found-users-info">
+          <h2 class="title-3">Achados Recentemente:</h2>
+          <div class="users-img-wrapper">
+            <img src="../../assets/imgs/user-tiny.svg" alt="">
+            <img src="../../assets/imgs/user-tiny.svg" alt="">
+            <img src="../../assets/imgs/user-tiny.svg" alt="">
+          </div>
+        </section>
+      </section>
+    </aside>
+    <main class="align-center bg-grey-1 container d-flex full-height justify-center">
+      <section class="form-wrapper full-width">
+        <h2 class="title-3">Procurar por um usuário</h2>
+        <form class="d-flex flex-column form full-width">
+          <div class="d-flex flex-column input-wrapper">
+            <label class="text-2" for="input-search">Usuário github</label>
+            <input class="text-2" type="search" id="input-search" placeholder="Digite um usuário do github aqui...">
+          </div>
+          <button class="button-brand" disabled="disabled">Ver perfil do github</button>
+        </form>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
