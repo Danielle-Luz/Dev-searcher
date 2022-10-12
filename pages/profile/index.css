@@ -1,3 +1,68 @@
-button {
-    
+.container {
+    max-width: 820px;
+    padding: 3.813rem 1.25rem;
+}
+
+.button-group {
+    gap: 0.875rem;
+}
+
+
+/* HEADER */
+.header {
+    margin-bottom: 4.375rem;
+    gap: 1rem;
+}
+
+.header button, .header a {
+    border-radius: var(--radius-1);
+    font-weight: 600;
+    padding: 0.7rem 1.563rem;
+}
+
+.profile {
+    gap: 1.25rem;
+}
+
+.profile img {
+    border: 2px solid var(--color-brand-2);
+    border-radius: var(--radius-round);
+    width: 80px;
+}
+
+.title-2 {
+    margin-bottom: 0.875rem;
+}
+
+.text-1 {
+    color: var(--color-grey-6);
+}
+
+.card .button-group .text-2 {
+    color: var(--color-grey-7);
+    margin-bottom: 0;
+}
+
+
+/* MEDIA */
+@media (max-width: 830px) {
+    .cards-container {
+        flex-direction: column;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    .button-group {
+        width: 100%;
+    }
+    .header .button-group {
+        flex-direction: column;
+    }
 }

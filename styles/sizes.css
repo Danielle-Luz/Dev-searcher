@@ -9,3 +9,11 @@
 .full-screen-height {
     height: 100vh;
 }
+
+.fit-height {
+    height: fit-content;
+}
+
+.fit-width {
+    width: fit-content;
+}

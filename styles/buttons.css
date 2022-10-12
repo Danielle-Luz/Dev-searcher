@@ -1,14 +1,18 @@
 button {
     border: none;
-    color: var(--color-grey-7);
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: var(--text-2);
+}
+
+button, a {
+    color: var(--color-grey-7); 
+    cursor: pointer;
     text-align: center;
 }
 
-.button-group {
-    column-gap: 0.875rem;
+a {
+    text-decoration: none;
 }
 
 .button-brand {
@@ -16,7 +20,7 @@ button {
 }
 
 .button-brand:disabled {
-    background-color: var(--color-brand-2);
+    background-color: var(--color-brand-3);
     color: var(--color-grey-6);
 }
 
