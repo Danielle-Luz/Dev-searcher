@@ -30,7 +30,7 @@ function changeButtonState () {
 function setButtonOnLoad () {
     const searchButton = document.getElementById("search-button");
     
-    searchButton.innerHTML = "<img class='spin' src='../../assets/imgs/spinner.svg'>";
+    searchButton.innerHTML = "<img width='15' height='15' class='spin' src='../../assets/imgs/spinner.svg'>";
 }
 
 function setButtonDefaultText () {

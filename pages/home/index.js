@@ -5,7 +5,7 @@
 
 
 function showLastSeenUsers () {
-    const lastSeenProfiles = JSON.parse(localStorage.getItem("searchedDevsList"));
+    const lastSeenProfiles = JSON.parse(localStorage.getItem("searchedDevsList"))||[];
     
     lastSeenProfiles.forEach( (profileData, index) => {
         const profilesContainer = document.querySelector(".users-img-wrapper");

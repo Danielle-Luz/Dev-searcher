@@ -32,18 +32,3 @@ body {
     --radius-2: 0.25rem;
     --radius-round: 100%;
 }
-
-
-.tooltip:hover::after {
-  background-color: white;
-  border-radius: var(--radius-2);
-  bottom: -20px;
-  color: var(--color-grey-1);
-  display: block;
-  font-size: var(--text-3);
-  font-weight: 500;
-  padding: 4px 8px;
-  position: absolute;
-  width: max-content;
-  z-index: 100;
-}

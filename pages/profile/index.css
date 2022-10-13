@@ -15,10 +15,14 @@
     gap: 1rem;
 }
 
-.button-group a {
+.button-group a, .button-group button {
     border-radius: var(--radius-1);
     font-weight: 600;
     padding: 0.7rem 1.563rem;
+}
+
+.email-button-wrapper {
+    background-color: transparent;
 }
 
 .profile {
@@ -36,10 +40,13 @@
     margin-bottom: 0.875rem;
 }
 
-.text-1 {
-    color: var(--color-grey-6);
+.header .text-1 {
     max-width: 280px;
     -webkit-line-clamp: 2;  
+}
+
+.text-1 {
+    color: var(--color-grey-6);
 }
 
 .text-2 {
