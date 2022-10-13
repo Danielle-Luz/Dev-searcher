@@ -28,6 +28,8 @@ function appendDevProfileInfo () {
     </a>`
     ;
 
+    document.title = name;
+
     setUserEmail(email);
 
     profileContainer.insertAdjacentHTML("beforeend", profileInfo);
