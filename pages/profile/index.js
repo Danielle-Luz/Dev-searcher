@@ -56,8 +56,8 @@ async function createRepositoryCard ({name, description, svn_url: repoUrl, url: 
             if (pagesUrl) {
                 return "href='"+ pagesUrl + "'"
             }
-            return ""
-        })()}">Demo</a>
+            return "style='pointer-events:none'"
+        })()}>Demo</a>
       </div>
     </div>
   </article>`;

@@ -11,8 +11,17 @@ function showLastSeenUsers () {
         const profilesContainer = document.querySelector(".users-img-wrapper");
         const profileElement = createLastSeenUser(profileData, index);
         
+        addLastSeenTitle();
+        
         profilesContainer.insertAdjacentHTML("beforeend", profileElement);
     })
+}
+
+function addLastSeenTitle () {
+    const lastSeenWrapper = document.querySelector(".found-users-info");
+    if (!lastSeenWrapper.querySelector(".title-3")) {
+        lastSeenWrapper.insertAdjacentHTML("afterbegin", '<h2 class="title-3">Achados Recentemente:</h2>');
+    }
 }
 
 function createLastSeenUser ({avatar_url, name}, index) {
