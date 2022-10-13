@@ -23,11 +23,11 @@
         </p>
         <section class="align-center d-flex flex-wrap found-users-info">
           <h2 class="title-3">Achados Recentemente:</h2>
-          <div class="users-img-wrapper">
-            <img src="../../assets/imgs/user-tiny.svg" alt="">
-            <img src="../../assets/imgs/user-tiny.svg" alt="">
-            <img src="../../assets/imgs/user-tiny.svg" alt="">
-          </div>
+          <ul class="d-flex users-img-wrapper">
+            <li><img src="../../assets/imgs/user-tiny.svg" alt=""></li>
+            <li><img src="../../assets/imgs/user-tiny.svg" alt=""></li>
+            <li><img src="../../assets/imgs/user-tiny.svg" alt=""></li>
+          </ul>
         </section>
       </section>
     </aside>
@@ -39,10 +39,12 @@
             <label class="text-2" for="input-search">Usuário github</label>
             <input class="text-2" type="search" id="input-search" placeholder="Digite um usuário do github aqui...">
           </div>
-          <button class="button-brand" disabled="disabled">Ver perfil do github</button>
+          <button id="search-button" class="button-brand d-flex justify-center" disabled>Ver perfil do github</button>
         </form>
       </section>
+      <a href="../profile/index.html" id="profile-link"></a>
     </main>
     <script src="index.js"></script>
+    <script type="module" src="../../scripts/search.js"></script>
   </body>
 </html>

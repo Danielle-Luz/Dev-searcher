@@ -5,7 +5,7 @@
 }
 
 .about {
-    max-width: 400px;
+    max-width: 410px;
 }
 
 .title-1 {
@@ -23,6 +23,7 @@
 
 .users-img-wrapper {
     column-gap: 0.688rem;
+    list-style-type: none;
 }
 
 .users-img-wrapper img {
@@ -70,6 +71,24 @@ input:focus {
 button {
     padding: 0.7rem;
     border-radius: var(--radius-2);
+}
+
+.not-found-message {
+    color: var(--color-alert);
+}
+
+.spin {
+    animation: spin-animation 0.2s infinite;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 700px) {

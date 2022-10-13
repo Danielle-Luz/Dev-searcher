@@ -6,6 +6,7 @@
     border: 2px solid var(--color-grey-4);
     border-radius: var(--radius-2);
     max-width: 381px;
+    height: 255px;
     padding: 2.563rem 1.688rem;
 }
 

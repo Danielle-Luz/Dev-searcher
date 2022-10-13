@@ -19,15 +19,28 @@ a {
     background-color: var(--color-brand-1);
 }
 
+.button-brand:hover {
+    background-color: var(--color-alert);
+}
+
 .button-brand:disabled {
-    background-color: var(--color-brand-3);
-    color: var(--color-grey-6);
+    background-color: var(--color-alert);
+    color: rgba(255, 255, 255, 0.35);
 }
 
 .button-outline {
     border: 1px solid var(--color-grey-7);
 }
 
+.button-outline:hover {
+    background-color: var(--color-brand-1);
+    border-color: transparent;
+}
+
 .button-default {
+    background-color: var(--color-grey-4);
+}
+
+.button-default:hover {
     background-color: var(--color-grey-3);
 }
