@@ -5,7 +5,7 @@
 }
 
 .about {
-    max-width: 410px;
+    max-width: 450px;
 }
 
 .title-1 {
@@ -31,6 +31,20 @@
     width: 44px;
 }
 
+.users-img-wrapper li {
+    position: relative;
+
+}
+
+.users-img-wrapper .tooltip {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.users-img-wrapper .tooltip::after {
+    content: "Acessar este perfil";
+}
 
 /* FORM */
 .form-wrapper {
