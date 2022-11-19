@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="../../styles/flex.css">
     <link rel="stylesheet" href="/styles/globalStyles.css" />
     <link rel="stylesheet" href="index.css" />
-    <title>Git Search</title>
+    <title>Dev Searcher</title>
   </head>
   <body class="d-flex full-screen-height">
-    <aside class="align-center bg-brand-1 container d-flex full-height justify-center about-wrapper">
+    <aside class="align-center bg-brand-1 container d-flex full-height
+      justify-center about-wrapper">
       <section class="about d-flex flex-column">
-        <h1 class="title-1">Git Search</h1>
+        <h1 class="title-1">Dev Searcher</h1>
         <p class="text-1">
           Encontre e se conecte com profissionais de forma rápida e fácil
         </p>
@@ -27,15 +28,19 @@
         </section>
       </section>
     </aside>
-    <main class="align-center bg-grey-1 container d-flex full-height justify-center">
+    <main class="align-center bg-grey-1 container d-flex full-height
+      justify-center">
       <section class="form-wrapper full-width">
         <h2 class="title-3">Procurar por um usuário</h2>
         <form class="d-flex flex-column form full-width">
           <div class="d-flex flex-column input-wrapper">
             <label class="text-2" for="input-search">Usuário github</label>
-            <input class="text-2" type="search" id="input-search" placeholder="Digite um usuário do github aqui...">
+            <input class="text-2" type="search" id="input-search"
+              placeholder="Digite um usuário do github aqui..."
+              autocomplete="off">
           </div>
-          <button id="search-button" class="button-brand d-flex justify-center" disabled>Ver perfil do github</button>
+          <button id="search-button" class="button-brand d-flex justify-center"
+            disabled>Ver perfil do github</button>
         </form>
       </section>
       <a href="../profile/index.html" id="profile-link"></a>

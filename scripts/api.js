@@ -1,3 +1,4 @@
+
 async function getRequest (url) {
     try {
         const response = await fetch(url);

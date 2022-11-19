@@ -33,14 +33,6 @@ function createLastSeenUser ({avatar_url, name}, index) {
     </li>`;
 }
 
-function openLastSeenUser (profile) {
-    const profileDataIndex = parseInt(profile.getAttribute("data-profile-index"));
-    const lastSeenProfiles = JSON.parse(localStorage.getItem("searchedDevsList"));
-    const userData = lastSeenProfiles[profileDataIndex];
-
-    localStorage.setItem("searchedDev", JSON.stringify(userData));
-}
-
 function addLastSeenListener () {
     const lastSeenProfiles = document.querySelectorAll(".users-img-wrapper span");
 
@@ -55,4 +47,12 @@ function addLastSeenListener () {
             profileLink.click();
         });
     });
+}
+
+function openLastSeenUser (profile) {
+    const profileDataIndex = parseInt(profile.getAttribute("data-profile-index"));
+    const lastSeenProfiles = JSON.parse(localStorage.getItem("searchedDevsList"));
+    const userData = lastSeenProfiles[profileDataIndex];
+
+    localStorage.setItem("searchedDev", JSON.stringify(userData));
 }

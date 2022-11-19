@@ -3,6 +3,51 @@
     getRepos();
 })();
 
+function appendDevProfileInfo () {
+    const userData = JSON.parse(localStorage.getItem("searchedDev"));
+    const profileContainer = document.getElementById("profile-wrapper");
+    const {avatar_url, name, bio, email, html_url: profileUrl} = userData;
+    const profileInfo =
+    `<a href="${profileUrl}" class="align-center d-flex profile">
+        <img src="${avatar_url}" alt="${name||"Descrição indisponível"}" width="80" height="80">
+        <section>
+            <h1 class="title-2">${name||"Nome indisponível"}</h1>
+            <p class="text-1 text-ellipsis">${bio||"Sem descrição disponível."}</p>
+        </section>
+    </a>`
+    ;
+
+    document.title = name||"Usuário pesquisado";
+
+    setUserEmail(email);
+
+    profileContainer.insertAdjacentHTML("beforeend", profileInfo);
+}
+
+function setUserEmail (email) {
+    const emailButton = document.getElementById("email-button");
+    let emailLink = "";
+
+    if (email) {
+        emailLink = `mailto:${email}`;
+        emailButton.setAttribute("href", emailLink);
+    } else {
+        const emailButtonWrapper = document.querySelector(".email-button-wrapper");
+        emailButtonWrapper.setAttribute("disabled", "true");
+        emailButtonWrapper.setAttribute("title", "Email indisponível");
+    }
+
+}
+
+async function getRepos () {
+    const {repos_url} = JSON.parse(localStorage.getItem("searchedDev"));
+
+    const response = await fetch(repos_url);
+    const repositoryList = await response.json();
+
+    renderAllRepositoryCards(repositoryList);
+}
+
 async function renderAllRepositoryCards (repositoryList) {
     const cardsContainer = document.querySelector(".cards-container");
 
@@ -18,27 +63,6 @@ async function renderAllRepositoryCards (repositoryList) {
         cardsContainer.insertAdjacentHTML("beforeend", repoElement);
     });
 
-}
-
-function appendDevProfileInfo () {
-    const userData = JSON.parse(localStorage.getItem("searchedDev"));
-    const profileContainer = document.getElementById("profile-wrapper");
-    const {avatar_url, name, bio, email, html_url: profileUrl} = userData;
-    const profileInfo =
-    `<a href="${profileUrl}" class="align-center d-flex profile">
-        <img src="${avatar_url}" alt="${name||"Descrição indisponível"}" width="80" height="80">
-        <section>
-            <h1 class="title-2">${name||"Nome indisponível"}</h1>
-            <p class="text-1 text-ellipsis">${bio||"Sem descrição disponível."}</p>
-        </section>
-    </a>`
-    ;
-
-    document.title = name;
-
-    setUserEmail(email);
-
-    profileContainer.insertAdjacentHTML("beforeend", profileInfo);
 }
 
 async function createRepositoryCard ({name, description, svn_url: repoUrl, url: repoRequestUrl}) {
@@ -83,28 +107,4 @@ async function getGithubPagesUrl(repoRequestUrl) {
     }
     
     return "";
-}
-
-function setUserEmail (email) {
-    const emailButton = document.getElementById("email-button");
-    let emailLink = "";
-
-    if (email) {
-        emailLink = `mailto:${email}`;
-        emailButton.setAttribute("href", emailLink);
-    } else {
-        const emailButtonWrapper = document.querySelector(".email-button-wrapper");
-        emailButtonWrapper.setAttribute("disabled", "true");
-        emailButtonWrapper.setAttribute("title", "Email indisponível");
-    }
-
-}
-
-async function getRepos () {
-    const {repos_url} = JSON.parse(localStorage.getItem("searchedDev"));
-
-    const response = await fetch(repos_url);
-    const repositoryList = await response.json();
-
-    renderAllRepositoryCards(repositoryList);
 }

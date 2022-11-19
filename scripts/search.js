@@ -15,7 +15,6 @@ import { getRequest } from "./api.js";
     });
 })();
 
-
 function changeButtonState () {
     const inputSearchValue = document.getElementById("input-search").value;
     const searchButton = document.getElementById("search-button");
@@ -25,12 +24,6 @@ function changeButtonState () {
     } else {
         searchButton.setAttribute("disabled", "true");
     }
-}
-
-function setButtonOnLoad () {
-    const searchButton = document.getElementById("search-button");
-    
-    searchButton.innerHTML = "<img width='15' height='15' class='spin' src='../../assets/imgs/spinner.svg'>";
 }
 
 function setButtonDefaultText () {
@@ -60,6 +53,12 @@ function getSearch () {
     .then(() => setButtonDefaultText());
 }
 
+function setButtonOnLoad () {
+    const searchButton = document.getElementById("search-button");
+    
+    searchButton.innerHTML = "<img width='15' height='15' class='spin' src='../../assets/imgs/spinner.svg'>";
+}
+
 function addSearchedDev (devData) {
     while (true) {
         let searchedDevsList = JSON.parse(localStorage.getItem("searchedDevsList"));
@@ -77,7 +76,6 @@ function addSearchedDev (devData) {
             searchedDevsList.push(devData);
     
             localStorage.setItem("searchedDevsList", JSON.stringify(searchedDevsList));
-    
         }
         break;
     }
@@ -88,10 +86,9 @@ function checkUserOnTheList ({login: seachedUser}) {
 
     const foundUser = searchedDevsList.find(({login}) => login == seachedUser);
 
-    console.log(foundUser);
-
     if (foundUser) {
         return true;
     }
+
     return false;
 }
